@@ -1,6 +1,8 @@
 # matheasy
 Notepad with embedded calculator and HTML LaTeX output developed as part of my Bachelor's thesis at Faculty of Electrical Engineering, Sarajevo in 2013. Written entirely in C# using Windows Presentation Foundation.
 
+Primary goal of this project was to embed useful and relatively powerful calculator inside ordinary plaintext document in a meaningful way.
+
 # Screenshots
 Main document editor:  
 
