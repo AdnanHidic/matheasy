@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{841E0BEC-AD3D-4595-8AEB-494BA1FE290B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MathEasy</RootNamespace>
+    <AssemblyName>MathEasy</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>AppIcon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="src\ConfigurationManagement\ConfigurationManager.cs" />
+    <Compile Include="src\Editing\Controls\Adapter.cs" />
+    <Compile Include="src\Editing\Controls\AutocompletePopup.xaml.cs">
+      <DependentUpon>AutocompletePopup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="src\Editing\Controls\DownloadWindow.xaml.cs">
+      <DependentUpon>DownloadWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="src\Editing\Controls\FindAndReplaceWindow.xaml.cs">
+      <DependentUpon>FindAndReplaceWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="src\Editing\Controls\MathBox.xaml.cs">
+      <DependentUpon>MathBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="src\Editing\Controls\UploadWindow.xaml.cs">
+      <DependentUpon>UploadWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="src\FileManagement\DocumentManager.cs" />
+    <Compile Include="src\NetworkManagement\NetworkManager.cs" />
+    <Compile Include="src\Rendering\PreviewBox.xaml.cs">
+      <DependentUpon>PreviewBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="src\Rendering\PreviewWindow.xaml.cs">
+      <DependentUpon>PreviewWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="src\Editing\Controls\ProgressRefresher.cs" />
+    <Compile Include="src\Editing\Logic\AutocompleteManager.cs" />
+    <Compile Include="src\Editing\Logic\KeyDecoder.cs" />
+    <Compile Include="src\Editing\Logic\SyntaxHighlighter.cs" />
+    <Compile Include="src\FileManagement\FileManager.cs" />
+    <Compile Include="src\FileManagement\DataStream.cs" />
+    <Compile Include="src\LMD\Commands\CommandEngine.cs" />
+    <Compile Include="src\LMD\Core\HTMLizer.cs" />
+    <Compile Include="src\LMD\Core\LMD_Commandtext.cs" />
+    <Compile Include="src\LMD\Core\LMD_Document.cs" />
+    <Compile Include="src\LMD\Core\LMD_Mathtext.cs" />
+    <Compile Include="src\LMD\Core\LMD_Object.cs" />
+    <Compile Include="src\LMD\Core\LMD_Plaintext.cs" />
+    <Compile Include="src\LMD\Math\Addition.cs" />
+    <Compile Include="src\LMD\Math\Approach.cs" />
+    <Compile Include="src\LMD\Math\Constant.cs" />
+    <Compile Include="src\LMD\Math\Division.cs" />
+    <Compile Include="src\LMD\Math\Exponentiation.cs" />
+    <Compile Include="src\LMD\Math\Expression.cs" />
+    <Compile Include="src\LMD\Math\IndefiniteIntegral.cs" />
+    <Compile Include="src\LMD\Math\Literal.cs" />
+    <Compile Include="src\LMD\Math\Limit.cs" />
+    <Compile Include="src\LMD\Math\Logarithm.cs" />
+    <Compile Include="src\LMD\Math\MathEngine.cs" />
+    <Compile Include="src\LMD\Math\Bracket.cs" />
+    <Compile Include="src\LMD\Math\Multiplication.cs" />
+    <Compile Include="src\LMD\Math\NaturalLogarithm.cs" />
+    <Compile Include="src\LMD\Math\Root.cs" />
+    <Compile Include="src\LMD\Math\Subscript.cs" />
+    <Compile Include="src\LMD\Math\Subtraction.cs" />
+    <Compile Include="src\LMD\Math\Symbol.cs" />
+    <Compile Include="src\LMD\Math\Token.cs" />
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="src\Editing\Controls\AutocompletePopup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="src\Editing\Controls\DownloadWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="src\Editing\Controls\FindAndReplaceWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="src\Editing\Controls\MathBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="src\Editing\Controls\UploadWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="src\Rendering\PreviewBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="src\Rendering\PreviewWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\AppIcon.ico" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="images\Refresh.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Custom-Icon-Design-Pretty-Office-5-Start.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Icons-Land-Play-Stop-Pause-Stop-Normal-Red.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="AppIcon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,14 @@
+﻿<Window x:Class="MathEasy.src.Editing.Controls.FindAndReplaceWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Find and replace" Height="147" Width="333" ResizeMode="NoResize" WindowStartupLocation="CenterOwner" ShowInTaskbar="False" KeyUp="Window_KeyUp" Icon="/MathEasy;component/images/AppIcon.ico">
+    <Grid>
+        <Label Content="Text to find:" Height="28" HorizontalAlignment="Left" Margin="19,12,0,0" Name="label1" VerticalAlignment="Top" />
+        <Label Content="Replace with:" Height="28" HorizontalAlignment="Left" Margin="12,41,0,0" Name="label2" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="98,14,0,0" Name="tb_find" VerticalAlignment="Top" Width="201" TabIndex="1" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="98,43,0,0" Name="tb_replace" VerticalAlignment="Top" Width="201" TabIndex="2" />
+        <Button Content="Replace" Height="23" HorizontalAlignment="Left" Margin="166,72,0,0" Name="b_replace" VerticalAlignment="Top" Width="64" Click="b_replace_Click" TabIndex="4" />
+        <Button Content="Cancel" Height="23" HorizontalAlignment="Left" Margin="236,72,0,0" Name="button1" VerticalAlignment="Top" Width="63" Click="button1_Click" TabIndex="5" />
+        <CheckBox Content="Match whole words" Height="16" HorizontalAlignment="Left" Margin="19,76,0,0" Name="cb_wholeWord" VerticalAlignment="Top" TabIndex="3" />
+    </Grid>
+</Window>

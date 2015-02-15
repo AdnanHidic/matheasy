@@ -1,0 +1,47 @@
+﻿<Window x:Class="MathEasy.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MathEasy RC" Height="404" Width="574" Icon="/MathEasy;component/images/AppIcon.ico" ResizeMode="CanResize" Name="mainWindow" xmlns:my="clr-namespace:MathEasy.src.Editing.Controls"
+        xmlns:commandns = "clr-namespace:MathEasy" Closing="mainWindow_Closing">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="22" />
+            <RowDefinition Height="325*" />
+            <RowDefinition Height="22" />
+        </Grid.RowDefinitions>
+        <Menu Grid.Row="0">
+            <MenuItem Header="File">
+                <MenuItem Header="New" Command="commandns:MathEasyCommands.NewDocument" InputGestureText="Ctrl+N"/>
+                <Separator/>
+                <MenuItem Header="Open" Command="commandns:MathEasyCommands.Open" InputGestureText="Ctrl+O"/>
+                <MenuItem Header="Download" Command="commandns:MathEasyCommands.Download" InputGestureText="Ctrl+D"/>
+                <Separator/>
+                <MenuItem Header="Save" Command="commandns:MathEasyCommands.Save" InputGestureText="Ctrl+S"/>
+                <MenuItem Header="Save as.."  Click="SaveAsClicked"/>
+                <MenuItem Header="Upload" Command="commandns:MathEasyCommands.Upload" InputGestureText="Ctrl+U"/>
+                <Separator/>
+                <MenuItem Header="Preview" Command="commandns:MathEasyCommands.Preview" InputGestureText="Ctrl+P"/>
+                <Separator/>
+                <MenuItem Header="Exit" Command="commandns:MathEasyCommands.ExitProgram" InputGestureText="Alt+F4"/>
+            </MenuItem>
+            <MenuItem Header="Edit">
+                <MenuItem Header="Undo" Command="commandns:MathEasyCommands.Undo" InputGestureText="Ctrl+Z"/>
+                <MenuItem Header="Redo" Command="commandns:MathEasyCommands.Redo" InputGestureText="Ctrl+Y"/>
+                <Separator/>
+                <MenuItem Header="Cut"  Command="{x:Static ApplicationCommands.Cut}" InputGestureText="Ctrl+X"/>
+                <MenuItem Header="Copy" Command="{x:Static ApplicationCommands.Copy}" InputGestureText="Ctrl+C"/>
+                <MenuItem Header="Paste" Command="{x:Static ApplicationCommands.Paste}" InputGestureText="Ctrl+V"/>
+                <MenuItem Header="Delete" Command="{x:Static ApplicationCommands.Delete}" InputGestureText="Del"/>
+                <Separator/>
+                <MenuItem Header="Find and Replace" Command="commandns:MathEasyCommands.FindAndReplace" InputGestureText="Ctrl+F"/>
+            </MenuItem>
+            <MenuItem Header="About">
+                <MenuItem Header="Author" Click="ShowAboutMsg" />
+            </MenuItem>
+        </Menu>
+        <my:MathBox Grid.Row="1" HorizontalAlignment="Stretch" x:Name="mbox" VerticalAlignment="Stretch" Width="Auto" AcceptsTab="True" FontFamily="Segoe UI" FontSize="14" AllowDrop="False" VerticalScrollBarVisibility="Auto" />
+        <ProgressBar Grid.Row="2" Height="22" HorizontalAlignment="Left" Name="pbar1" VerticalAlignment="Top" Width="100" />
+        <Label Content="Matching brackets" Grid.Row="2" Height="26" HorizontalAlignment="Left" Margin="98,0,0,0" Name="l_progresstext" VerticalAlignment="Top" FontSize="9" />
+        <Button Content="Enable" Grid.Row="2" Height="22" HorizontalAlignment="Left" Margin="187,0,0,0" Name="bmatchingdisplay" VerticalAlignment="Top" Width="52" Click="button1_Click" />
+    </Grid>
+</Window>
